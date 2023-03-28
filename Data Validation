@@ -1,0 +1,29 @@
+name = input("Enter your name: ")
+classs = input("Enter your class: ")
+mobile_number = input("Enter your mobile number: ")
+email_address = input("Enter your school email address: ")
+
+if len(name) <= 2 or len(name) > 54 or name.isdigit: #check if name is too short, too long or is only digits
+  print("name is not valid")
+
+else:
+  print("valid name")
+
+#check if items in 0 and 1 position is a digit, check items in position 3 to 5 is a digit, check item in position 2 == /, check if length == 5
+if classs[0:2].isdigit() and classs[3:6].isdigit() and classs[2] =='/' and len(classs)==5 : 
+  print("valid class")
+
+else:
+  print("class is not valid")
+
+if len(mobile_number) == 8 and mobile_number.isdigit(): #check if length is exactly 8 and is only made of numbers
+  print("valid mobile number")
+
+else:
+  print("mobile number is not valid")
+
+if "@asr.edu.sg" in email_address or "@students.edu.sg" in email_address:
+  print("email address is valid")
+
+else:
+  print("email address is not valid")
